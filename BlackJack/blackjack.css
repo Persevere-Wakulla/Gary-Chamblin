@@ -1,0 +1,208 @@
+*, *::before, ::after {
+    box-sizing: border-box;
+    font-family:cursive;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background: repeating-linear-gradient(transparent, #0c0000 40px),
+            repeating-linear-gradient(0.85turn, transparent, #0c0c0c 20px);
+}
+
+/* text properties */
+.bold{
+    font-size: 2rem;
+    font-weight: 800;
+    color:rgb(5, 0, 7);
+   
+}
+/* #player-img{
+    width:150px;
+} */
+
+
+#blackjack{
+    font-size: 42px;
+    z-index: -1;
+
+}
+.blackJack-text{
+    height:7rem;
+    width:100%;
+    background-image: url(./svg/bj.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top:2rem;
+}
+
+
+/* play table */
+#play-table{
+
+    width:600px;
+    max-width: 100%;
+    background-color: rgb(44, 83, 6);
+    padding: 20px;
+    border-radius: 200px;
+    box-shadow: inset 0 0 20px 5px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 2rem solid rgb(32, 59, 5);
+    
+}
+/* flex for the cards to space */
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2.4rem;
+    justify-content: center;
+}
+img{
+    width:100%;
+}
+#decision{
+   /* width: 80px; */
+   height:100px;
+   margin:0 auto;
+   margin-top: -6rem;
+}
+
+/* face down cards */
+.card__face--back{
+    width: 4rem;
+    background-color: aliceblue;
+    height: 5rem;
+    border-radius: 8px;
+    border:2px solid rgb(110, 103, 103);
+}
+/* empty card slots */
+.face-card{
+    width: 4rem;
+    background-color: rgb(85, 109, 131);
+    height: 5rem;
+    border-radius: 8px;
+    border:2px solid rgb(110, 103, 103);
+}
+/* scene for housing 3D space */
+.scene{
+    width: 4rem;
+    height: 5rem;
+    perspective: 600px;
+}
+/* for transform elements */
+.card{
+    width: 4rem;
+    height:5rem;
+    position:relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+}
+/* faces of the cards */
+.card__face {
+    position: absolute;
+    height: 4rem;
+    width: 5rem;
+    backface-visibility: hidden;
+}
+.card__face--front {
+    
+    background-color: rgb(85, 109, 131);
+    border-radius: 8px;
+
+  }
+  /* for the back of the cards */
+  .card__face--back {
+    background-image: url(./svg/globe.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateY( 180deg );
+    width:5rem;
+    height:7rem;
+  }
+  /* transform to flip the cards */
+  .is-flipped {
+    transform: rotateY(180deg);
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+/* Hit and Stay Buttons */
+.game-btn{
+    padding: .75rem;
+    background-color: rgb(124, 6, 6);
+    color: whitesmoke;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+}
+
+/* add and minus buttons for betting */
+.bank-btn{
+    padding: .75rem;
+    background-color: rgb(124, 6, 6);
+    color: whitesmoke;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+}
+
+/*shadow effect when buttons are pushed */
+button:active{
+  box-shadow: 0px 0 3px 2px rgb(58, 9, 9);
+
+}
+
+/* bank */
+#bank{
+    background-color: rgb(44, 83, 6);
+    padding: .5px;
+    border-radius:15px;
+    box-shadow: 0 0 20px 20px;
+    width:350px;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;  
+}
+/* animation for you win, you lose, etc. */
+  @keyframes tada {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    10%, 20% {
+      -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    30%, 50%, 70%, 90% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    40%, 60%, 80% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  #decision{
+    font-size: 4rem;
+    animation:tada 3s linear infinite alternate;
+    text-shadow: #FC0 1px 0 10px;
+    z-index:3;
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+}
+
+

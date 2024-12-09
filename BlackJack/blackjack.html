@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blackjack.css">
+    <title>Document</title>
+</head>
+<!-- body -->
+
+<body>
+
+    <main>
+
+        <!-- Table -->
+        <section id="play-table" class="column">
+            <!-- dealer side -->
+            <section class="column" id="dealer">
+                <p class="bold">Dealer</p>
+                <article class="play-area flex" id="deal"></article>
+            </section>
+
+            <!-- center for pot -->
+            <section id="center" class="column">
+                <div id="pot" class="column">
+                    <div class="blackJack-text"></div>
+                    <!-- <p class="big bold">Pot</p> -->
+
+                    <!-- Decision area on weather you win, you lose etc.. -->
+                    <h2 id="decision"></h2>
+
+
+                    <p class="big bold">$<span id="pot-avail"></span></p>
+                </div>
+            </section>
+
+            <!-- player side -->
+            <section class="column" id="player">
+
+                <article class="play-area flex" id="play">
+
+                </article>
+
+                <!-- <img src="./svg/player.png" alt="player" id="player-img"> -->
+                <p class="bold">Player</p>
+
+                <!-- Hit and stay buttons -->
+
+            </section>
+
+
+        </section>
+        <!-- bank -->
+        <article class="bank-area" id="bank">
+            <!-- amount owned -->
+            <p class="big bold">Bank: $<span id="money"></span></p>
+            <!-- Place bet -->
+            <p class="big bold">Bet: <span id="wager"></span></p>
+            <article id="btns" class="btns">
+                <button type="button" class="game-btn" id="deal-btn">Deal</button>
+                <button type="button" class="game-btn" id="hit">Hit</button>
+                <button type="button" class="game-btn" id="stay">Stay</button>
+            </article>
+            <!-- Min Bet-->
+            <button type="button" class="bank-btn" id="min-bet">Min Bet</button>
+            <!-- subtract -->
+            <button type="button" class="bank-btn" id="lower-bet">-</button>
+            <!-- Bet submit -->
+            <button type="button" class="game-btn" id="bet-btn">Bet</button>
+            <!-- add -->
+            <button type="button" class="bank-btn" id="raise-bet">+</button>
+            <!-- Max Bet -->
+            <button type="button" class="bank-btn" id="max-bet">Max Bet</button>
+        </article>
+
+    </main>
+    <!-- <p class="bold" id="deal-card">Deal</p> -->
+    <!-- <div id="two-clubs"></div> -->
+    <script src="blackjack.js"></script>
+</body>
+
+</html>

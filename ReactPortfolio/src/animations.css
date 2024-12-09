@@ -1,0 +1,338 @@
+
+/* ?Name Logo  */
+#spinLogo {
+  animation: logo-spin infinite 10s linear;
+}
+@keyframes logo-spin {
+    from {
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+    to {
+      transform: rotate3d(11, 0.5, 2, 360deg);
+    }
+  }
+  /* @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 5s linear;
+    } */
+  /* } */
+  
+  /* ?React Logo Spin */
+  #react {
+    animation: lang-logo-spin infinite 10s linear;
+  }
+  @keyframes lang-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* ?Footer Logos and about page cards */
+  .bioDiv {
+    animation-duration: 1.5s;
+    animation-name: slide-in-top;
+  }
+  @keyframes slide-in-top {
+    from {
+      translate: -1150px -100vh;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+
+  .about-left {
+    animation-duration: 1.5s;
+    animation-name: slide-in-left;
+  }
+  .footer {
+    animation-duration: 1.5s;
+    animation-name: slide-in-left;
+  }
+  @keyframes slide-in-left {
+    from {
+      translate: -150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+
+  .about-mid {
+    animation-duration: 1.5s;
+    animation-name: slide-in-mid;
+  }
+  @keyframes slide-in-mid {
+    from {
+      translate: -150px 150vh;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+  
+ 
+  .about-right {
+    animation-duration: 1.5s;
+    animation-name: slide-in-right;
+  }
+  @keyframes slide-in-right {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+  
+
+  #ringSpin {
+    animation: ring-spin infinite 10s ease-in-out alternate;
+    transition: all .5s;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+  }
+  @keyframes ring-spin {
+    0% {
+      transform: rotate3d(0, 0, 0, 0deg) translate3d(-200px, -50px, 0px);
+    }
+    
+    25%{
+      transform: rotate3d(5, 0.2, 1, 180deg) translate3d(100px, 20px,0px);
+    }
+    50% {
+      transform: rotate3d(11, 0.5, 2, 360deg) translate3d(150px,50px,0px);
+    }
+    100% {
+      transform: rotate3d(0, 0, 0, 0deg) translate3d(0px,0px,0px);
+    }
+  }
+
+  .greetingDiv {
+    transition: all 0.7s;
+    animation: welcome-rotate  1s linear;
+  }
+@keyframes welcome-rotate {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%) rotateX(-360deg)
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0px) rotateX(0deg)
+  }
+}
+
+.quoteArticle {
+animation: quote-rotate alternate 1s linear;
+}
+@keyframes quote-rotate {
+  0% {
+    opacity: 0;
+    transform: translateY(300%) rotate(360deg)
+}
+100% {
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg)
+}
+}
+
+
+@property --rot {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 360deg;
+} */
+
+/* ?Name Logo  */
+#spinLogo {
+  animation: logo-spin infinite 10s linear;
+}
+@keyframes logo-spin {
+    from {
+      transform: rotate3d(0, 0, 0, 0deg);
+    }
+    to {
+      transform: rotate3d(11, 0.5, 2, 360deg);
+    }
+  }
+  /* @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 5s linear;
+    } */
+  /* } */
+  
+  /* ?React Logo Spin */
+  #react {
+    animation: lang-logo-spin infinite 10s linear;
+  }
+  @keyframes lang-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* ?Footer Logos and about page cards */
+  .bioDiv {
+    animation-duration: 1.5s;
+    animation-name: slide-in-top;
+  }
+  @keyframes slide-in-top {
+    from {
+      translate: -1150px -100vh;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+
+  .about-left {
+    animation-duration: 1.5s;
+    animation-name: slide-in-left;
+  }
+  .footer {
+    animation-duration: 1.5s;
+    animation-name: slide-in-left;
+  }
+  @keyframes slide-in-left {
+    from {
+      translate: -150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+
+  .about-mid {
+    animation-duration: 1.5s;
+    animation-name: slide-in-mid;
+  }
+  @keyframes slide-in-mid {
+    from {
+      translate: -150px 150vh;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+  
+ 
+  .about-right {
+    animation-duration: 1.5s;
+    animation-name: slide-in-right;
+  }
+  @keyframes slide-in-right {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+  
+
+  #ringSpin {
+    transition: all .5s;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    animation: ring-spin infinite 10s ease-in-out alternate;
+    position: relative;
+  }
+
+  @keyframes ring-spin {
+    0% {
+      transform: rotate3d(0, 0, 0, 0deg);
+      /* translate3d(-200px, -50px, 0px); */
+      left: var(--translate0Left);
+      top: var(--translate0Top)
+    }
+    
+    25%{
+      transform: rotate3d(5, 0.2, 1, 180deg); 
+      /* translate3d(100px, 20px,0px); */
+      left: var(--translate25Left);
+      top: var(--translate25Top)
+     
+    }
+    50% {
+      transform: rotate3d(11, 0.5, 2, 360deg); 
+      /* translate3d(150px,50px,0px); */
+      left: var(--translate50Left);
+      top: var(--translate50Top)
+    }
+    75%{
+      transform: rotate3d(11, 0.5, 2, 180deg) 
+      translate3d(150px,50px,0px);
+      left: var(--translate75Left);
+      top: var(--translate75Top)
+    }
+    100% {
+      transform: rotate3d(0, 0, 0, 0deg); 
+      translate3d(0px,0px,0px);
+      left: var(--translate100Left);
+      top: var(--translate100Top)
+    }
+  }
+
+  .greetingDiv {
+    transition: all 0.7s;
+    animation: welcome-rotate  1s linear;
+  }
+@keyframes welcome-rotate {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%) rotateX(-360deg)
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0px) rotateX(0deg)
+  }
+}
+
+.quoteArticle {
+animation: quote-rotate alternate 1s linear;
+}
+@keyframes quote-rotate {
+  0% {
+    opacity: 0;
+    transform: translateY(300%) rotate(360deg)
+}
+100% {
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg)
+}
+}

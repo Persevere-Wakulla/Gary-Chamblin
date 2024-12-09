@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "animate.css",
+			"path": "Z:/Students/14 Chamblin/animate.css"
+		},
+		{
+			"name": "BlackJack",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "BlackJack"
+	}
+}

@@ -1,0 +1,305 @@
+@media(max-width: 1200px) {
+  .headerDiv {
+    justify-content: space-between;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+  }
+
+  .detailsImgDiv {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .detailsImg {
+    width: 35%;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chowpesTitle,
+  .gameTitle {
+    font-size: 4rem
+  }
+
+  .loginDiv {
+    width: fit-content;
+  }
+
+  .loginFormBtn {
+    width: 50%;
+    font-size: .65em;
+  }
+
+  .navbar1 {
+    grid-row: 2;
+    grid-column: 1/4;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .formMain {
+    width: 12rem;
+  }
+
+  .userName {
+    font-size: 3rem;
+  }
+
+  .navLinks {
+    font-size: 1.25em;
+    width: 10em;
+    padding: .25em;
+  }
+
+
+  .filterBtn,
+  .infoBtn,
+  .backBtn {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .recipeName {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card-text {
+    font-size: 18px;
+  }
+
+  .contentDiv {
+    max-width: 100%;
+  }
+
+  .greetingDiv>h1 {
+    font-size: 28px;
+  }
+
+  .greetingDiv>h2 {
+    font-size: 26px;
+  }
+
+  .greetingDiv>p {
+    font-size: 16px;
+  }
+
+  .accountForm {
+    flex-direction: column;
+  }
+
+  .accountImgDiv {
+    width: 15rem;
+  }
+
+  .userInfoDiv h3 {
+    color: var(--primary-color);
+    font-size: 24px;
+  }
+
+  .accountTitle {
+    font-size: 6vw;
+  }
+
+  .accountBtns {
+    font-size: 12px;
+    width: 14vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+@media (max-width: 770px) {
+
+  /* ?Home Page */
+  .contentDiv {
+    max-width: 100%;
+  }
+
+  /* ?Recipes Page */
+  /* .cardLinks {
+    width: 70%;
+  }
+  .cardDiv {
+    width: 100%;
+  }
+  .recipeCardImg {
+    width: 100%;
+  } */
+
+  /* ?Details Page */
+  .detailsImg {
+    width: 50%;
+  }
+
+  .addRemoveFav {
+    font-size: 12px;
+  }
+
+  /* ?Account Page */
+  .accountTitle {
+    font-size: 8vw;
+  }
+
+  .accountImgDiv {
+    width: 30vw;
+  }
+
+  .userInfoDiv h3 {
+    color: var(--primary-color);
+    font-size: 3.25vw;
+  }
+
+  /* ?Game Page */
+  .gameImages {
+    width: 100px;
+  }
+
+  /* ?Admin */
+  .adminUsersInfoCard {
+    flex-direction: column;
+  }
+
+  .usersPersonalInfo {
+    text-align:center;
+  }
+  .regForm input {
+    width: 50%;
+    padding: .35em;
+  }
+
+}
+
+
+@media (max-width: 490px) {
+  .loginDiv {
+    max-width:75%;
+  }
+  /* ?Home Page */
+  .chowpesTitle,
+  .gameTitle,
+  .createRecipeTitle {
+    font-size: 3rem;
+  }
+
+
+  .userName {
+    font-size: 2rem;
+  }
+
+  .contentDiv {
+    max-width: 100%;
+    position: relative;
+    top: 5rem;
+  }
+
+  .greetingDiv>h1 {
+    font-size: 24px;
+  }
+
+  .greetingDiv>h2,
+  .score,
+  .high-score {
+    font-size: 22px;
+  }
+
+  .greetingDiv>p {
+    font-size: 12px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  /* ?Recipes Details Page */
+  .directions * {
+    font-size: 16px !important;
+
+  }
+
+  .detailsPgBtns {
+    font-size: 10px;
+    width: 38%;
+  }
+
+  /* ?Convert Page */
+  .convertTitle {
+    font-size: 18px;
+  }
+
+  /* ?Account Page */
+#userComments {
+  margin-top: 2rem;
+}
+
+  .accountBtns {
+    width: 18vw;
+  }
+
+  .accountNav a {
+    font-size: 14px;
+  }
+  .accountNavDiv {
+    width: 80%;
+  }
+
+  /* ?Game Page */
+
+  .gameTitle {
+    font-size: 28px;
+  }
+  .gameImages {
+    /* object-fit: cover; */
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .gameButton{
+    font-size: 60%;
+  }
+  .score, .high-score {
+    font-size: 13px;
+
+  }
+}
+
+/*TODO Animations */
+
+.pulse {
+  animation: pulse 1.5s linear infinite;
+  background:
+    linear-gradient(var(--primary-color) 0 0) no-repeat var(--p, 0) 100% / var(--p, 0) .1em;
+  transition: 0.4s, background-position 0s;
+}
+
+.chowpesTitle:hover {
+  cursor: pointer;
+  --p: 100%;
+  animation: pulse 1.5s linear infinite;
+}
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    color: var(--primary-color);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+    color: var(--secondary-color);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    color: var(--primary-color);
+  }
+}

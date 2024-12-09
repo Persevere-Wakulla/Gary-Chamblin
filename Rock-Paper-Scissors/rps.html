@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="rps.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+
+  <header>
+    <article id="border" class="flex">
+
+      <!-- Player Score -->
+      <div id="score-box">
+        <p id="score">Human</p>
+        <p id="number">0</p>
+      </div>
+      <img src="./images/logo.svg" id="rps-logo" alt="logo">
+      <!-- Computer Score -->
+      <div id="compScoreBox">
+        <p id="compScore">Computer</p>
+        <p id="compScoreNum">0</p>
+      </div>
+    </article>
+  </header>
+  <section class="page-container">
+    <main class="playArea">
+
+      <!-- Rock Paper Scissors and triangle Images -->
+      <!-- I have images nested inside of buttons -->
+      <h2 id="you-picked">You Picked</h2>
+      <section id="play-section" class="grid">
+
+        <img src="./images/bg-triangle.svg" id="background-triangle" alt="triangle">
+
+        <button type="button" id="rock-img" class="rock-img"><img src="./images/icon-rock.svg" class="hand-signs"
+            alt="rock"></button>
+
+        <button type="button" id="paper-img"><img src="./images/icon-paper.svg" class="hand-signs" alt="paper"></button>
+
+        <h2 id="house-picked">The House Picked</h2>
+
+        <button type="button" id="scissors-img"><img src="./images/icon-scissors.svg" class="hand-signs"
+            alt="scissors"></button>
+      </section>
+      <!-- Decisions -->
+      <article id="decision">
+        <h2 id="you-win">You Win</h2>
+        <h2 id="you-lose">You Lose</h2>
+        <h2 id="tie">You Tie</h2>
+      </article>
+
+      <!-- Play again and Rules Buttons I have an image popover tied to my rules button -->
+      <div id="again">
+        <button type="button" id="play-again">Play Again</button>
+      </div>
+      <div id="mypopover" popover><img src="./images/image-rules.svg" width="400px" alt="rules"></div>
+      <button type="button" id="rules" popovertarget="mypopover">Rules</button>
+
+    </main>
+    <footer>
+
+    </footer>
+
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <h2>Gary Chamblin</h2>.
+  </div>
+  <script src="rps.js"></script>
+</body>
+
+</html>
