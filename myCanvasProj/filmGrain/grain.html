@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grain.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="img">
+<canvas id="noise"></canvas>
+<canvas id="scratch"></canvas>
+
+<svg>
+<filter id="disp-1"><feTurbulence id="seed" type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="0"></feTurbulence><feDisplacementMap in="SourceGraphic" scale="20"></feDisplacementMap></filter>  
+</svg>
+    </div>
+    <script src="grain.js"></script>
+</body>
+</html>

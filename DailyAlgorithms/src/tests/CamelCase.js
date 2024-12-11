@@ -1,11 +1,11 @@
 // Todo Convert a string to camelCase.
 
 // ?One Way
-String.prototype.camelCase = function() {
+String.prototype.camelCase = function () {
     const words = this.split(' ');
     const solution = [];
-    for(let i = 0; i < words.length; i++){
-        if(words[i][0]){
+    for (let i = 0; i < words.length; i++) {
+        if (words[i][0]) {
             solution.push(words[i][0].toLocaleUpperCase())
         }
         solution.push(words[i].slice(1))
@@ -18,8 +18,8 @@ console.log(string.camelCase());
 
 
 // ! Another Way
-String.prototype.CamelCase = function() {
-    return this.split(' ').map(function(word) {
+String.prototype.CamelCase = function () {
+    return this.split(' ').map(function (word) {
         return word.charAt(0).toUpperCase() + word.slice(1)
     }).join('')
 }

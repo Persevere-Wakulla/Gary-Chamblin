@@ -1,3 +1,5 @@
+//Todo: Create a function that returns any of the items you can afford in the store with the money you have in your wallet. Sort the list in alphabetical order.
+
 function PurchasedItems(list, amount){
     let cart = []
     for (const [key,value] of Object.entries(list)){
@@ -11,7 +13,6 @@ function PurchasedItems(list, amount){
     }
     return cart.sort()
 }                                                                        
-
     console.log(PurchasedItems({
     Water: "$1",
     Bread: "$3",

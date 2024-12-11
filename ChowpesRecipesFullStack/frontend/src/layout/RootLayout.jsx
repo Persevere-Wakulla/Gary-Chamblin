@@ -1,5 +1,5 @@
-import { useState, createContext } from "react";
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useState, createContext, useEffect } from "react";
+import { NavLink, Outlet, redirect, useNavigate } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 import LoginForm from "../pages/LoginForm";
 
@@ -9,9 +9,20 @@ export default function RootLayout() {
   const [user, setUser] = useState(JSON.parse(sessionStorage.getItem("name")));
   // console.dir(user);
   const navigate = useNavigate();
+
+  // when you move location, collapse menu
+  useEffect(() => {
+    const navi = document.querySelector(".navbar-collapse");
+    const btn = document.querySelector(".ToggleBtn");
+    if (navi.classList.contains("show")) {
+      navi.classList.replace("show", "collapse");
+      btn.classList.add("collapsed");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  }, [location.pathname]);
+
   const loginHandler = (e) => {
     e.preventDefault();
-    console.dir(e);
     let data = {};
     document.querySelectorAll("#loginForm input").forEach((inp) => {
       data[inp.id] = inp.value;
@@ -72,7 +83,7 @@ export default function RootLayout() {
                   id="navbarNavAltMarkup"
                 >
                   <div className="navbar-nav d-flex gap-3 m-auto">
-                    <NavLink className="navLinks btnStyle m-auto" to="/">
+                    <NavLink className="navLinks btnStyle m-auto">
                       <span className="m-auto d-flex align-items-center justify-content-center gap-2">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
